@@ -9,8 +9,8 @@
   }
 
   ArticleList.prototype.createArticle = function(header) {
-    article = new Article(header)
-    this.articles.push(article)
+    article = new Article(header);
+    this.articles.push(article);
   }
 
   exports.ArticleList = ArticleList;

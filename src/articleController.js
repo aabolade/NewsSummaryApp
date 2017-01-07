@@ -2,8 +2,8 @@
 
   function ArticleController() {
 
-    this.articleList = new ArticleList
-    this.articleListView = new ArticleListView(this.articleList)
+    this.articleList = new ArticleList;
+    this.articleListView = new ArticleListView(this.articleList);
 
   }
 
