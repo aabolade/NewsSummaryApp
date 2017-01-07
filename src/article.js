@@ -1,6 +1,10 @@
 (function(exports) {
-  function Article() {
-    this.headline = "Headline"
+  function Article(headline) {
+    this.headline = headline;
+  }
+
+  Article.prototype.getHeadline = function() {
+    return this.headline;
   }
   exports.Article = Article;
 })(this);
