@@ -14,7 +14,6 @@
   var articleList = new ArticleList;
   articleList.createArticle("Headline");
   var articleListView = new ArticleListView(articleList);
-  console.log(articleListView.returnHTML())
   assert.isTrue(articleListView.returnHTML() === "<ul><li><div>Headline</div></li></ul>" )
 })();
 
