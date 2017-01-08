@@ -1,15 +1,27 @@
 (function(exports) {
 
-  function CurrentArticles() {
-
+  function CurrentArticles(articleController) {
+    this.articleController = articleController;
   }
 
-  CurrentArticles.prototype.getCurrentArticles = function() {
+  CurrentArticles.prototype.requestCurrentArticles = function() {
     var requestURL = "https://content.guardianapis.com/search?api-key="+GUARDIAN_API_KEY
-    $.get(requestURL,function(data) {
-      console.log(data.response.results)
+
+    function updateArticles(result) {
+      this.articleController.updateArticleList(result)
+      this.articleController.updateHTML()
+    }
+
+    var promise = $.get(requestURL,function(data) {
     })
+
+    promise.then(function(data) {
+      updateArticles(data.response.results);
+    });
+
+    console.log(this.articleController.articleList)
   }
+
 
   exports.CurrentArticles = CurrentArticles;
 
