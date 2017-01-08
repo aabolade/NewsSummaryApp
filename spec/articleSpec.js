@@ -1,7 +1,10 @@
-(function InstantiateArticleWithHeadline() {
+(function InstantiateArticleWithHeadlineAndURL() {
   var headline = "Headline";
-  var article = new Article(headline);
+  var url = "url"
+  var article = new Article(headline,url);
   assert.isTrue(article.headline === headline)
+  console.log(article.url)
+  assert.isTrue(article.url === url)
 })();
 
 (function TestMethodToGetHeadline() {

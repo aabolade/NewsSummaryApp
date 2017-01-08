@@ -12,16 +12,17 @@
 
 (function returnHTMLForOneArticle() {
   var articleList = new ArticleList;
-  articleList.createArticle("Headline");
+  articleList.createArticle("Headline","");
   var articleListView = new ArticleListView(articleList);
-  assert.isTrue(articleListView.returnHTML() === "<ul><li><div>Headline</div></li></ul>" )
+  console.log(articleListView.returnHTML())
+  assert.isTrue(articleListView.returnHTML() === "<ul><li><div><a href=\"\">Headline</a></div></li></ul>" )
 })();
 
 (function returnHTMLForMoreThanOneArticle() {
   var articleList = new ArticleList;
-  articleList.createArticle("First Headline");
-  articleList.createArticle("Second Headline");
-  articleList.createArticle("Third Headline");
+  articleList.createArticle("First Headline","");
+  articleList.createArticle("Second Headline","");
+  articleList.createArticle("Third Headline","");
   var articleListView = new ArticleListView(articleList);
-  assert.isTrue(articleListView.returnHTML() === "<ul><li><div>First Headline</div></li><li><div>Second Headline</div></li><li><div>Third Headline</div></li></ul>" )
+  assert.isTrue(articleListView.returnHTML() === "<ul><li><div><a href=\"\">First Headline</a></div></li><li><div><a href=\"\">Second Headline</a></div></li><li><div><a href=\"\">Third Headline</a></div></li></ul>" )
 })();

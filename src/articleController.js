@@ -12,17 +12,17 @@
     element.innerHTML = this.articleListView.returnHTML();
   }
 
-  ArticleController.prototype.createArticle = function(headline) {
-    this.articleList.createArticle(headline);
+  ArticleController.prototype.createArticle = function(headline,url) {
+    this.articleList.createArticle(headline,url);
   }
 
   ArticleController.prototype.updateArticleList = function(result) {
 
     for(count=0;count<result.length;count++) {
-      this.createArticle(result[count].webTitle);
+      console.log(result[count].webUrl)
+      this.createArticle(result[count].webTitle,result[count].webUrl);
     }
 
-    console.log(this.articleList.articles)
   }
 
   exports.ArticleController = ArticleController;

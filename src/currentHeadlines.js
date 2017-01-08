@@ -8,8 +8,8 @@
     var requestURL = "https://content.guardianapis.com/search?api-key="+GUARDIAN_API_KEY
 
     function updateArticles(result) {
-      this.articleController.updateArticleList(result)
-      this.articleController.updateHTML()
+      this.articleController.updateArticleList(result);
+      this.articleController.updateHTML();
     }
 
     var promise = $.get(requestURL,function(data) {
@@ -19,10 +19,7 @@
       updateArticles(data.response.results);
     });
 
-    console.log(this.articleController.articleList)
   }
-
-
   exports.CurrentArticles = CurrentArticles;
 
 })(this);

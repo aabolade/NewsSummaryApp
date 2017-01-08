@@ -7,9 +7,8 @@
     var openTag = "<ul>";
     var contentHTML = "";
     for(count=0;count<this.articleList.articles.length;count++) {
-      contentHTML+= "<li><div>" + this.articleList.showArticles()[count].headline + "</div></li>";
+      contentHTML+= "<li><div><a href=\""+this.articleList.showArticles()[count].url + "\">" + this.articleList.showArticles()[count].headline + "</a></div></li>";
     }
-      console.log(this.articleList.articles)
       return openTag+= contentHTML + "</ul>"
   }
 

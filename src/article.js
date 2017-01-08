@@ -1,6 +1,7 @@
 (function(exports) {
-  function Article(headline) {
+  function Article(headline, url) {
     this.headline = headline;
+    this.url = url;
   }
 
   Article.prototype.getHeadline = function() {

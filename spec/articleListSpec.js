@@ -11,6 +11,8 @@
 (function createsAnArticle() {
   var articleList = new ArticleList;
   var headline = "Headline";
-  articleList.createArticle(headline);
+  var url = "url"
+  articleList.createArticle(headline,url);
   assert.isTrue(articleList.showArticles()[0].headline === headline)
+  assert.isTrue(articleList.showArticles()[0].url === url)
 })();

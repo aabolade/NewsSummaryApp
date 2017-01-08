@@ -1,5 +1,8 @@
 (function AnArticleControllerCanBeInstantiated() {
-  var articleController = new ArticleController();
+
+  currentArticles = new CurrentArticles
+
+  var articleController = new ArticleController(currentArticles);
   assert.isTrue(articleController instanceof ArticleController)
 })();
 
