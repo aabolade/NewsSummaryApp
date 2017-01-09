@@ -1,5 +1,10 @@
 # News Summary App
 
+Description
+===========
+
+Single Page web app that displays the summary of the current news.
+
 User Stories
 ============
 
@@ -28,3 +33,22 @@ As a busy politician
 I can see whizzy animations in the App
 To make my news reading more fun
 ```
+
+Technologies used
+=================
+
+* Code and testing written using Javascript
+* HTML for markup, CSS for styling
+* [Guardian API](http://open-platform.theguardian.com/documentation/)
+
+Setup and Installation
+======================
+
+1. Fork and Clone the repo.
+2. 
+
+
+Further Features
+================
+
+* Make web page responsive on Mobile devices
