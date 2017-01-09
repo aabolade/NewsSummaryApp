@@ -7,7 +7,7 @@
     var openTag = "<ul>";
     var contentHTML = "";
     for(count=0;count<this.articleList.articles.length;count++) {
-      contentHTML+= "<li><div><a href=\""+this.articleList.showArticles()[count].url + "\">" + this.articleList.showArticles()[count].headline + "</a></div></li>";
+      contentHTML+= "<li><div><a href=\""+this.articleList.showArticles()[count].url + "\">" + this.articleList.showArticles()[count].headline + "</a><img src=\"" + this.articleList.showArticles()[count].image + "\"></div></li>";
     }
       return openTag+= contentHTML + "</ul>"
   }

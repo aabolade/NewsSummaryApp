@@ -5,7 +5,7 @@
   }
 
   CurrentArticles.prototype.requestCurrentArticles = function() {
-    var requestURL = "https://content.guardianapis.com/search?api-key="+GUARDIAN_API_KEY
+    var requestURL = "https://content.guardianapis.com/search?show-fields=all&api-key="+GUARDIAN_API_KEY
 
     function updateArticles(result) {
       this.articleController.updateArticleList(result);

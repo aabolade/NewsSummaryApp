@@ -12,7 +12,9 @@
   var articleList = new ArticleList;
   var headline = "Headline";
   var url = "url"
-  articleList.createArticle(headline,url);
+  var image = "image"
+  articleList.createArticle(headline,url,image);
   assert.isTrue(articleList.showArticles()[0].headline === headline)
   assert.isTrue(articleList.showArticles()[0].url === url)
+  assert.isTrue(articleList.showArticles()[0].image === image)
 })();

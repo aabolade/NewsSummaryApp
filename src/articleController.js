@@ -12,17 +12,16 @@
     element.innerHTML = this.articleListView.returnHTML();
   }
 
-  ArticleController.prototype.createArticle = function(headline,url) {
-    this.articleList.createArticle(headline,url);
+  ArticleController.prototype.createArticle = function(headline,url,image) {
+    this.articleList.createArticle(headline,url,image);
   }
 
   ArticleController.prototype.updateArticleList = function(result) {
 
     for(count=0;count<result.length;count++) {
-      console.log(result[count].webUrl)
-      this.createArticle(result[count].webTitle,result[count].webUrl);
+      // var images = $(result[count].fields.body).find("img")
+      this.createArticle(result[count].webTitle,result[count].webUrl,result[count].fields.thumbnail);
     }
-
   }
 
   exports.ArticleController = ArticleController;
