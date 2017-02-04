@@ -3,14 +3,27 @@
     <head>
       <meta charset="utf-8">
       <title>News Summary App</title>
-
+      <link rel="stylesheet" href="public/stylesheets/main.css">
     </head>
 
     <body>
-      <section>
-        <h1>News Summary App</h1>
+      <header class="primary-header container group">
+        <h1 class="logo">
+          <a href="index.html"> News Summary App</a>
+        </h1>
+      </header>
+
+      <section class="hero container">
+        <h2> The latest headlines from the Guardian </h2>
       </section>
-      <div id="headlines">Hello</div>
+
+
+      <section class="row">
+        <div class="grid" id="headlines">
+        </div>
+      </section>
+
+
       <script src=".env"></script>
       <script src="src/jquery-3.1.1.js"></script>
       <script src="src/article.js"></script>

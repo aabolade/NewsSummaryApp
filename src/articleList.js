@@ -8,8 +8,8 @@
     return this.articles;
   }
 
-  ArticleList.prototype.createArticle = function(header,url,image) {
-    article = new Article(header,url,image);
+  ArticleList.prototype.createArticle = function(header,url,image, description) {
+    article = new Article(header,url,image, description);
     this.articles.push(article);
   }
 
