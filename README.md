@@ -45,7 +45,7 @@ Setup and Installation
 ======================
 
 1. Fork and Clone the repo.
-2. 
+2. open index.html in a browser.
 
 
 Further Features

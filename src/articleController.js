@@ -19,7 +19,6 @@
   ArticleController.prototype.updateArticleList = function(result) {
 
     for(count=0;count<result.length;count++) {
-      // var images = $(result[count].fields.body).find("img")
       this.createArticle(result[count].webTitle,result[count].webUrl,result[count].fields.thumbnail);
     }
   }
